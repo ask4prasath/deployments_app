@@ -1,0 +1,35 @@
+<h1>Listing deploy_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>History</th>
+      <th>Started at</th>
+      <th>Ended at</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deploy_histories.each do |deploy_history| %>
+      <tr>
+        <td><%= deploy_history.name %></td>
+        <td><%= deploy_history.user %></td>
+        <td><%= deploy_history.history %></td>
+        <td><%= deploy_history.started_at %></td>
+        <td><%= deploy_history.ended_at %></td>
+        <td><%= deploy_history.status %></td>
+        <td><%= link_to 'Show', deploy_history %></td>
+        <td><%= link_to 'Edit', edit_deploy_history_path(deploy_history) %></td>
+        <td><%= link_to 'Destroy', deploy_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deploy history', new_deploy_history_path %>

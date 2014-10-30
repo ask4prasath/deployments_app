@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deploy_history.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @deploy_history.user %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @deploy_history.history %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @deploy_history.started_at %>
+</p>
+
+<p>
+  <strong>Ended at:</strong>
+  <%= @deploy_history.ended_at %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @deploy_history.status %>
+</p>
+
+<%= link_to 'Edit', edit_deploy_history_path(@deploy_history) %> |
+<%= link_to 'Back', deploy_histories_path %>
